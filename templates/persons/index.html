@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/sale.jpg' %}" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Human trafficking</span>
+                    <span class="section-heading-lower">These children need us</span>
+                </h2>
+                <p class="mb-3">Human trafficking is modern slavery. All people from every nation can feel its effects. Together, we as a college campus and a community, can help bring awareness to this blemish in our society and strive to eradicate and be an example of what should be done to support those who fall into the grasp of human trafficking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section cta" style="background-color: grey; opacity: .9; margin-left: 10%; margin-right: 10%; border-radius: 15px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper"></span>
+                        <span class="section-heading-lower">$32 Billion Industry</span>
+                    </h2>
+                    <p class="mb-0">Every year, millions of men, women, and children are trafficked in countries around the world, including the United States. It is estimated that human trafficking is a $32 billion per year industry, second only to drug trafficking as the most profitable form of transnational crime.</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper"></span>
+                        <span class="section-heading-lower">What can I do to help?</span>
+                    </h2>
+                    <p class="mb-0" style="text-align: justify;">It can be hard to come up with way to combat trafficking, here are some ideas:
+                        <ul style="text-align: justify;">
+                            <li>Volunteer and support anti-trafficking efforts in your community.</li>
+                            <li>Meet with or write to your local, state, and federal elected officials to let them know you care about combating human trafficking and ask what they are doing to address it.</li>
+                            <li>Be well-informed. Set up a web alert to receive current human trafficking news.</li>
+                            <li>Organize a fundraiser and donate the proceeds to an anti-trafficking organization.</li>
+                            <li>Use your social media platforms to raise awareness about human trafficking, using the following hashtags: #endtraffickingutah or #betheoneutah.</li>
+                            <li>Follow local, state, and national anti-trafficking social media accounts.</li>
+                            <li>Become a mentor to a young person or someone in need.</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<h1 style="text-align: center;">
+    <a style="background-color: darkcyan; border: none; border-radius: 15px; color: white; padding: 30px 64px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" href="{% url 'data' %}">
+        View Data of missing people from Utah
+    </a></div>
+</h1>
+<br>
+<br>
+{% endblock %}
+        

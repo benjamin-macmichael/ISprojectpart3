@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <br>
+        <h4 style="margin-left: auto; margin-right: auto; text-align: center; color: burlywood;">Missing Persons Include:</h4>
+        <table class="table table-bordered table-hover table-condensed" style="color: blanchedalmond; text-align: center; width: 75%; margin-left: auto; margin-right: auto;">
+            <thead style="color: burlywood"><tr><th title="Field #1">Date Missing</th>
+            <th title="Field #2">Last Name</th>
+            <th title="Field #3">First Name</th>
+            <th title="Field #4">Age At Missing</th>
+            <th title="Field #5">City</th>
+            <th title="Field #6">State</th>
+            <th title="Field #7">Gender</th>
+            <th title="Field #8">Race</th>
+            <th title="Field #8"></th>
+            </tr></thead>
+            {% for oPerson in data %}
+              <tr>
+                  <td style="text-align: center;">{{ oPerson.date_missing }}</td>
+                  <td style="text-align: center;">{{ oPerson.last_name }}</td>
+                  <td style="text-align: center;">{{ oPerson.first_name }}</td>
+                  <td style="text-align: center;">{{ oPerson.age_at_missing }}</td>  
+                  <td style="text-align: center;">{{ oPerson.city }}</td>
+                  <td style="text-align: center;">{{ oPerson.state }}</td>
+                  <td style="text-align: center;">{{ oPerson.gender }}</td>
+                  <td style="text-align: center;">{{ oPerson.race }}</td>
+                  <td>
+                    <a href="{% url 'info' person_id=oPerson.id %}">View Info</a>
+                  </td>                                              
+              </tr>
+              {% endfor %}    
+          </table>
+            </table>
+        <br>
+        <br>
+        <h1 style="text-align: center;">
+            <a style="background-color: darkcyan; border: none; border-radius: 15px; color: white; padding: 30px 64px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" href="{% url 'index' %}">
+                Back to home
+            </a></div>
+        </h1>
+        <br>
+        <br>
+{% endblock %}

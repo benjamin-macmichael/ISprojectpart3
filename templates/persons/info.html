@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+        <h4 style="margin-left: auto; margin-right: auto; text-align: center; color: burlywood;">{{ data.first_name }} {{ data.last_name }}</h4>
+        <table class="table table-bordered table-hover table-condensed" style="color: blanchedalmond; text-align: center; width: 75%; margin-left: auto; margin-right: auto;">
+            <thead style="color: burlywood"><tr><th title="Field #1">Date Missing</th>
+            <th title="Field #2">Last Name</th>
+            <th title="Field #3">First Name</th>
+            <th title="Field #4">Age At Missing</th>
+            <th title="Field #5">City</th>
+            <th title="Field #6">State</th>
+            <th title="Field #7">Gender</th>
+            <th title="Field #8">Race</th>
+            </tr></thead>
+              <tr>
+                  <td style="text-align: center;">{{ data.date_missing }}</td>
+                  <td style="text-align: center;">{{ data.last_name }}</td>
+                  <td style="text-align: center;">{{ data.first_name }}</td>
+                  <td style="text-align: center;">{{ data.age_at_missing }}</td>  
+                  <td style="text-align: center;">{{ data.city }}</td>
+                  <td style="text-align: center;">{{ data.state }}</td>
+                  <td style="text-align: center;">{{ data.gender }}</td>
+                  <td style="text-align: center;">{{ data.race }}</td>                                             
+              </tr>  
+        </table>
+            </table>
+<br>
+<br>
+<h1 style="text-align: center;">
+    <a style="background-color: darkcyan; border: none; border-radius: 15px; color: white; padding: 30px 64px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;" href="{% url 'data' %}">
+        Back to table
+    </a></div>
+</h1>
+<br>
+<br>
+{% endblock %}
+
